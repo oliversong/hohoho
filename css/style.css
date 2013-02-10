@@ -1,0 +1,167 @@
+@font-face
+{
+    font-family: 'Agaramond';
+    src: url('AGaramondPro-Regular.otf');
+}
+
+body{
+	background-color:#f8f8f8;
+	font-family:'Open Sans', sans-serif;
+}
+
+h1{
+	font-family:'Agaramond';
+	margin-bottom:0px;
+	margin-top:15px;
+}
+
+h2{
+	font-family:'Agaramond';
+	font-size:24px;
+}
+h3{
+	font-family:'Open Sans', sans-serif;
+}
+
+hr{
+	border-top:1px solid #ddd;
+	border-bottom:none;
+	margin-top:10px;
+	margin-bottom:20px;
+}
+/*a, a:hover{
+	color:inherit !important;
+}
+*/
+.websites{
+	color:skyblue;
+}
+.designs{
+	color:orange;
+}
+.products{
+	color:violet;
+}
+.website{
+	border:skyblue 1px solid;
+}
+.design{
+	border:orange 1px solid;
+}
+.product{
+	border:violet 1px solid;
+}
+.popover{
+	color:#333 !important;
+}
+
+.project{
+	float:left;
+	width:120px;
+	height:120px;
+	position:relative;
+	margin:10px 20px 10px 0px;
+	background-color:#DDD;
+	background-size:contain;
+	background-position:center center;
+	opacity:.5;
+	background-repeat:no-repeat;
+	-webkit-transition: opacity .1s ease-in-out;
+  	-moz-transition: opacity .1s ease-in-out;
+  	-o-transition: opacity .1s ease-in-out;
+  	transition: opacity .1s ease-in-out;
+  	transition: .1s ease-in-out;
+}
+
+ul{
+	margin:10px;
+	margin-left:17px;
+}
+li{
+	list-style:none;
+}
+.dontleft{
+	margin:0px;
+	float:left;
+}
+.padbottom{
+	margin-bottom:100px;
+}
+.padbottom2{
+	margin-bottom:15px;
+}
+.project:hover{
+	opacity:1;
+}
+.goaway{
+	-webkit-transition: opacity .1s ease-in-out;
+  	-moz-transition: opacity .1s ease-in-out;
+  	-o-transition: opacity .1s ease-in-out;
+  	transition: opacity .1s ease-in-out;
+	opacity:1;
+	border:none;
+}
+.goaway:hover{
+	opacity:0;
+	border:none;
+}
+.img1{
+	background-image:url('../img/notability.jpg');
+}
+.img2{
+	background-image:url('../img/grubhunter.jpg');
+}
+.img3{
+	background-image:url('../img/automator.jpg');
+}
+.img4{
+	background-image:url('../img/fibr.jpg');
+}
+.img5{
+	background-image:url('../img/swappable.jpg');
+}
+.img6{
+	background-image:url('../img/cnvrge.jpg');
+}
+.img7{
+	background-image:url('../img/movies.jpg');
+}
+.img8{
+	background-image:url('../img/nsuw.jpg');
+}
+.img10{
+	background-image:url('../img/kushiri.jpg');
+}
+.img11{
+	background-image:url('../img/recruitd.jpg');
+}
+.img12{
+	background-image:url('../img/campaign.jpg');
+}
+.img13{
+	background-image:url('../img/hiflii.jpg');
+}
+.img14{
+	background-image:url('../img/council.jpg');
+}
+.img15{
+	background-image:url('../img/patent4.jpg');
+}
+.img16{
+	background-image:url('../img/oplabs.jpg');
+}
+.img17{
+	background-image:url('../img/patent3.jpg');
+}
+.img18{
+	background-image:url('../img/nrl.jpg');
+}
+.img19{
+	background-image:url('../img/patent2.jpg');
+}
+.img20{
+	background-image:url('../img/china.jpg');
+}
+.img21{
+	background-image:url('../img/patent1.jpg');
+}
