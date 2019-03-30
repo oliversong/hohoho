@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!--
+   COLLABORATORS:
+   none
+  -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ready, Set, Translate !</title>
+<link type="text/css" href="jquery/css/ui-lightness/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+<link type="text/css" href="translate_game.css" rel="stylesheet" />
+<script type="text/javascript" src="jquery/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="jquery/js/jquery-ui-1.8.17.custom.min.js"></script>
+<script type="text/javascript" src="dicts.json"></script>
+<script type="text/javascript" src="translate_game.js"></script>
+</head>
+
+<body>
+<!-- Your HTML here -->
+<div class="wrap">
+    <div class="header">
+        <h1>Translate from
+            <span class="from">Spanish</span>
+            to
+            <span class="to">English</span>
+        </h1>
+    </div>
+    <div class="mainwrap">
+        <table class="bootable">
+        	<tr class="titles">
+            	<td><h2 class="from">Spanish</h2></td>
+                <td><h2 class="to">English</h2></td>
+                <td><h2>Answer</h2></td>
+            </tr>
+            <tr class="interact">
+            	<td class="word padthis">espejo</td>
+                <td class="padthis"><input class="inputbox" placeholder="Answer" type="text" /></td>
+                <td class="padthis"><button class="see">See Answer</button></td>
+            </tr>
+            <tr class="hist correct">
+            	<td>calabaza</td>
+                <td>pumpkin</td>
+                <td><span class="ui-icon ui-icon-check"></span></td>
+            </tr>
+            <tr class="hist wrong">
+            	<td>postmodernidad</td>
+                <td>phone</td>
+                <td>postmodernism</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

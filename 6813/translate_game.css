@@ -1,0 +1,95 @@
+@font-face{
+	font-family: Helvetica-Neue-Ult;
+	src: url('ult.ttf');	
+}
+html {
+    background-color: #eee;
+	background-image:url(back.png);
+	color:#707070;
+	font-family:Helvetica;
+}
+h1{
+	font-size: 60px;
+	font-family: "Helvetica-Neue-Ult";
+	text-shadow: white 0 -1px 0;
+	margin:0px;
+	padding:0px;
+	font-weight:normal;
+
+}
+h2{
+	font-size: 30px;
+	font-family:"Helvetica-Neue-Ult";
+	font-weight:normal;
+	margin:0px;
+	padding:0px;
+	text-shadow: white 0 -1px 0;
+}
+.wrap{
+	width:800px;
+	float:left;
+	margin:10px;
+	font-size:25px;
+}
+.header{
+	float:left;
+	margin-bottom:30px;
+}
+.mainwrap{
+	float:left;
+	margin-left:4px;
+}
+.leftcol{
+	float:left;
+}
+.midcol{
+	float:left;
+	margin-left:20px;
+}
+.rightcol{
+	margin-left:20px;
+	float:left;
+}
+h1 .from{
+	color:#000;	
+}
+h1 .to{
+	color:#000;	
+}
+.word{
+	color:#000;
+}
+.padthis{
+	padding-bottom:25px;	
+}
+.inputbox{
+	width: 200px;
+	font-size: 18px;
+	font-family: Helvetica;
+	margin-top: 2px;
+}
+.leftcol .top{
+	margin-top:2px;	
+}
+.bootable{
+	font-size:25px;	
+}
+.wrong{
+	color:red;	
+}
+.wrong td:nth-child(2){
+	text-decoration:line-through;	
+}
+.correct{
+	color:blue;	
+}
+td{
+	padding-right:30px;	
+}
+.see{
+width: 123px;
+height: 29px;
+font-size: 18px;
+font-family: Helvetica;
+}
+/* Your CSS here */

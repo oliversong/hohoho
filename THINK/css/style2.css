@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	background-color:#FFF;
+	overflow:hidden;
+}
+
+#bar{
+	position:absolute;
+	bottom:200px;
+	left:0px;
+	height:250px;
+	width:100%;
+	background-color:#4078D6;
+}
+
+#words{
+	position:absolute;
+	left:50%;
+	margin-left:-400px;
+	top:-220px;
+	font-size: 200px;
+	font-family:"Arial Black", Gadget, sans-serif;
+	color:#4078D6;
+	width:100%px;
+}
+#techfair{
+	position:absolute;
+	left:20px;
+	top:-14px;
+	font-size:37px;
+	font-family:"Arial Black", Gadget,sans-serif;
+	color:#FFF;
+}
+
+a.home:link, a.home:visited,a.home:active {
+	color:#FFF;
+	text-decoration:none;
+}
+a.home:hover{
+	color:#F93;	
+}
+
+#words2{
+	position:absolute;
+	left:50%;
+	margin-left:-475px;
+	top:390px;
+	font-size: 200px;
+	font-family:"Arial Black", Gadget, sans-serif;
+	color:#4078D6;
+	width:100%px;
+}
+
+ul.one{list-style-type:none;
+text-align:right;
+position:absolute;
+top:20px;
+left:50%;
+margin-left:-430px;
+font-family:"Arial Black", Gadget, sans-serif;
+color:#FFF;
+font-size:40px;
+}
+
+ul.two{
+	list-style-type:none;
+	position:absolute;
+	left:50%;
+	top:50px;
+}
+.texta{
+	width:400px;
+	height:46px;
+	font-size:36px;
+}
+
+#secondone{
+	position:relative;
+	top:2px;
+}
+
+#button{
+	position:absolute;
+	top:190px;
+	left:50%;
+	margin-left:40px;
+}
+.button{
+	color:#000;
+	font:Arial, Helvetica, sans-serif;
+	background-color:#FFF;
+}
+
+#repo{
+	position:absolute;
+	left:140px;
+	top:0px;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>La Verde's</title>
+<style>
+body{background-color:#641502}
+.twtr-hd{display:none;
+}
+.twtr-ft div {
+display:none;
+}
+
+p{font-size:36px;
+}
+.twtr-doc {
+font-weight:normal;
+text-align:right;
+}
+#twitter{position:absolute;
+left:50%;
+margin-left:-400px;
+top:500px;
+}
+.head{
+	font-style:normal;
+	font-family:Arial, Helvetica, sans-serif;
+	position:relative;
+	top:370px;
+}
+#big{
+	font-size:80px;
+	color:#FFF;
+text-shadow: 2px 2px 2px #000;
+
+}
+#small{
+	color:#FFF;
+	font-size:20px;
+}
+#cup{
+	background-image:url(cup.png);
+	position:absolute;
+	left:50%;
+	margin-left:-200px;
+	height:369px;
+	width:399px;
+}
+
+</style>
+</head>
+<body>
+<div id="cup"></div>
+<div class="head">
+<center id="big">3AM LA VERDE'S RUNS </center>
+<center id="small">Just friggin come to this shit, you know you want to. This is when we're going.</center>
+</div>
+<div id="twitter">
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 20,
+  interval: 5000,
+  width: 800,
+  height: 1000,
+  theme: {
+    shell: {
+      background: '#661300',
+      color: '#FFF'
+    },
+    tweets: {
+      background: '#661300',
+      color: '#FFF',
+      links: '#FFF'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: false,
+    behavior: 'all'
+  }
+}).render().setUser('3AMLAVERDES').start();
+</script>
+</div>
+</body>
+</html>

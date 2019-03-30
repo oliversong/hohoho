@@ -1,0 +1,15 @@
+Hello! Welcome to the coding challenge.
+
+Your task is threefold.
+
+In folder 1 you will find your first puzzle. It will take you around 9 hours to search through the folders sequentially if you were working 100% efficiently. You don't have that much time. You'll have to write a script. Time for a crash course in python file navigating…
+
+Hint1: the first item is c4ca4238a0b923820dcc509a6f75849b
+Hint2: the last item contains the **locked** payload
+Hint3: after you've collected all the special chars, you probably want to look at them carefully. And maybe adjust the window size. This is the **first** key.
+
+In folder 2 you will find a series of questions and files. Answer them and unlock the files.
+
+In folder 3 you will find a Words With Friends board. Use the items you've collected so far to find the highest scoring word. This is the **second** key.
+
+Good luck, happy coding! Watch out for any stray brothers…

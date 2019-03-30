@@ -1,0 +1,71 @@
+body {
+color:#000000;
+font-family:HelveticaNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size:20px;
+line-height:48px;
+margin:36px;
+}
+
+.submit {
+font-family:HelveticaNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;
+width:145px;
+height:auto;
+
+}
+
+a.submitlink {
+	text-decoration:none;
+	background-color:#FFF;
+}
+
+a.submitlink :hover, a.submitlink :active {
+	background-color:#FC0;
+}
+
+span.t {
+background-color:#DDDDDD;
+color:#000000;
+text-decoration:none;
+}
+span.t:hover {
+background-color:#BBBBBB;
+color:#000000;
+cursor:pointer;
+text-decoration:none;
+}
+
+a {
+	text-decoration:none;
+	color:#000;
+}
+
+a.classy {
+background-color:#DDDDDD;
+color:#000000;
+text-decoration:none;
+}
+a.classy :link {
+background-color:#DDDDDD;
+color:#000000;
+text-decoration:none;
+}
+a.classy :hover {
+background-color:#BBBBBB;
+color:#000000;
+text-decoration:none;
+}
+
+.asdf {
+	color:#999
+}
+
+#logobig{
+width:auto;
+	height:auto;
+	position:relative;
+	left:30px;
+	top:30px;
+}
+a.goback :hover, a.goback :active {
+	background-color:#fc0;
+}

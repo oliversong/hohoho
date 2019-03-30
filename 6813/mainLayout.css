@@ -1,0 +1,62 @@
+﻿html, body, div, td, tr, table, tbody{
+    margin:0px;
+    padding:0px !important;
+    border:none;
+    border-spacing:none !important;
+
+}
+#navigation{
+	width:140px
+}
+
+#navigation table{
+	width:100%
+}
+
+#navigation input{
+	width:100%
+}
+
+#content{
+	background-color:gray;
+}
+
+.turnind{
+    background-color:black;
+    color:white;
+    width:140px;
+    height:25px;
+    font-size:20px;
+    text-align:center;
+}
+#content{
+    border:1px solid;
+    margin:0px;
+    padding:0px;
+}
+.board{
+    width:400px;
+    height:400px;
+    background-color:white;
+    position:relative;
+    float:left;
+}
+.square{
+    position:relative;
+    float:left;
+    background-size:100%;
+	width:30px;
+	height:30px;
+}
+.white{
+    background-color:white;
+}
+.gray{
+    background-color:#CCC;
+}
+#cancan{
+    position:absolute;
+    left:149px;
+    top:3px;
+    z-index:5;
+}

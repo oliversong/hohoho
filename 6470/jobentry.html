@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" /> 
+	<meta name="author" content="Keone Hon, Oliver Song, and Kevin Li" /> 
+	<meta name="keywords" content="recruitd, recruited, jobs, college, student, tag, profile, search, employment" /> 
+	<meta name="description" content="Monster-Linkedin mashup that doesn't suck." /> 
+	<meta name="robots" content="all" /> 
+	<title>Recruitd: Job Hunting That Doesn't Suck</title> 
+ 
+ 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />    
+	<link type='text/css' href='css/contact.css' rel='stylesheet' media='screen' />
+	<link type="text/css" href="css/cupertino/jquery-ui-1.8.8.custom.css" rel="stylesheet" />	
+
+	<script type="text/javascript"></script> 
+	<script src="js/jquery-1.4.4.min.js" type="text/javascript"></script>
+	<script src="js/jquery.easing.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.8.custom.min.js"></script>
+
+
+    <link rel="Shortcut Icon" type="image/x-icon" href="favicon.ico" />	
+    
+</head>
+
+<body>
+
+    <div style='display:none'>
+                <img src='images/contact/loading.gif' alt='' />
+    </div>
+    <div id="feedback">
+        <div id="contact-form">
+            <a id="feedbackicon"  href="#" title="Leave us a comment!" class="contact">Constructive Criticism!</a>
+        </div>
+        
+        <a id="blogicon"   href="/blog.html" title="Check out the Blog!" class="contact">Check out the Blog!</a>
+    </div>
+
+
+    <div id="header">
+        <a href="http://www.recruitd.com"><div class="reclogo"></div></a>
+		  <div id="searchbox">
+                <form>
+                <input class="differentsearch" type="search" placeholder="Search">
+                <input type = "submit" value="Find" style="display:none;">
+                </form>
+            </div>
+    
+    <!-------- VERY IMPORTANT NAVIGATION CHANGED MARGIN LEFT CHANGED TO PADDING LEFT!!!!!!!---->
+	    <div id="navigation">
+              <div class="navigation" id="home"><div><a class="nav" href="#">home</a></div></div>
+              <div class="navigation" id="about"><div><a class="nav" href="#">public</a></div></div>
+              <div class="navigation" id="services"><div><a class="nav" href="#">lists</a></div></div>
+              <div class="navigation" id="solutions"><div><a class="nav" href="#">search</a></div></div>
+              <div class="navigation" id="contact"><div>account</div><strong><a style="color:#000;margin-right:5px;text-decoration:none;"
+ href="#">settings	</a>|<a href="#" style="padding-top:25px;color:#000;padding-left:5px;letter-spacing:1px;text-decoration:none;">logout</a></strong></div>
+		</div>
+          
+        
+    </div>
+    
+    
+<!----------
+----------
+----------NEW
+----------
+------------>
+<script type="text/javascript">
+ 
+$(function() 
+{
+$(".expandable").focus(function()
+{
+$(this).animate({"height": "120px",}, "fast" );
+$("#button_block").slideDown("fast");
+return false;
+});
+$("#cancel").click(function()
+{
+$(".expandable").animate({"height": "30px",}, "fast" );
+$("#button_block").slideUp("fast");
+return false;
+});
+
+	
+
+});
+</script>
+    
+    <div id="top">
+    <div id="toptop"></div>
+    <div id="topmid">
+            <textarea class="expandable" placeholder="Update your feed!"></textarea>
+            <div id="button_block">
+            <button class="movingbutton" >Share</button><button id="cancel" class="movingbutton">Cancel</button>
+			</div>
+	</div>
+    <div id="topbot"></div>
+</div>
+    <!----------
+----------
+----------NEW
+----------
+------------>
+    
+	
+
+<!----------END OF THE TOP -----------------
+---------------------------
+---------------------------
+--------------------------->
+	<link type="text/css" href="css/jobentry.css" rel="stylesheet" />	
+<script>
+	$(function() {
+		$( ".datepicker" ).datepicker();
+
+	});
+</script>
+
+
+<div class="newjob">You're posting a new job!</div>
+<div id="entryform" class="jobentryborder">
+	
+    <form>
+        <table border="0">
+            <tr>
+                <td class="tablepadding">Job Title:</td>
+                <td class="tablealign"><input class="forminput fontadjust" type="text" placeholder="Code Monkey"></td>
+            </tr>
+            <tr>
+                <td class="tablepadding">Offer Closing Date:</td>
+                <td class="tablealign"><input class="forminput datepicker fontadjust" type="text" placeholder="Offer expires!"></td>
+            </tr>
+            <tr>
+                <td class="tablepadding">Qualifications:</td>
+                <td class="tablealign"><textarea rows="10" cols="33" class="forminput2 fontadjust" placeholder="Has to be awesome"></textarea></td>
+            </tr>
+            <tr>
+                <td class="tablepadding">Details:</td>
+                <td class="tablealign"><textarea rows="10" cols="33" class="forminput2 fontadjust" type="textarea" placeholder="Whatever you want to say" ></textarea></td>
+            </tr>
+            <tr>
+                <td class="tablepadding">Career Tag:</td>
+                <td class="tablealign"><input class="forminput careers fontadjust" type="text" placeholder="Computer Scientist" ></td>
+            </tr>
+            <tr>
+                <td class="tablepadding">Other Tags:</td>
+                <td></td>
+            </tr>
+            </tr>
+        </table>
+        <input class="differentsearch moving randominput" type="search" placeholder="Tag this job">
+
+        <div class="wtf"><table class="wtf2"><tr ><td class="extrapadding"></td></tr></table></div>
+	 	<button class="button2">Submit!</button>
+
+    </form>
+
+</div>
+	<script>
+	$.widget( "custom.catcomplete", $.ui.autocomplete, {
+		_renderMenu: function( ul, items ) {
+			var self = this,
+				currentCategory = "";
+			$.each( items, function( index, item ) {
+				if ( item.category != currentCategory ) {
+					ul.append( "<li class='ui-autocomplete-category'>" + item.category + "</li>" );
+					currentCategory = item.category;
+				}
+				self._renderItem( ul, item );
+			});
+		}
+	});
+	</script>
+	<script>
+	$(function() {
+		var data = [
+			{ label: "anders", category: "" },
+			{ label: "andreas", category: "" },
+			{ label: "antal", category: "" },
+			{ label: "annhhx10", category: "Products" },
+			{ label: "annk K12", category: "Products" },
+			{ label: "annttop C13", category: "Products" },
+			{ label: "anders andersson", category: "People" },
+			{ label: "andreas andersson", category: "People" },
+			{ label: "andreas johnson", category: "People" }
+		];
+		
+		$( ".differentsearch" ).catcomplete({
+			delay: 0,
+			source: data
+		});
+	});
+	$(function() {
+		var data1 = [
+			{ label: "monkey", category: "" },
+			{ label: "chimpanzee", category: "" },
+			{ label: "orangutan", category: "" },
+			{ label: "ape", category: "Products" },
+			{ label: "king kong", category: "Products" },
+			{ label: "bazooka", category: "Products" },
+			{ label: "Roar", category: "People" },
+			{ label: "D:<", category: "People" },
+			{ label: "Yes.", category: "People" }
+		];
+		
+		$( ".careers" ).catcomplete({
+			delay: 0,
+			source: data1
+		});
+	});
+
+</script>
+            <script type="text/javascript">
+            function showValue(newValue,number)
+            {
+                document.getElementById("range"+number).innerHTML=newValue;
+            }
+            </script>
+<!------------------------START OF BOTTOM
+-----------------------------------------
+-----------------------------------------
+-----------------------------------------
+-----------------------------------------
+----------------------------------------->
+
+
+<!----------MARGIN OF THE FOOTER CHANGED AGAIN V ----->
+
+	<div id="footerbuilder" style="margin-top:200px;">
+    <span id="copyright">Copyright © 2010 Recruitd Inc. All rights reserved.</span>
+    <div id="footerlinks">
+        <a href="#">Home</a> |
+        <a href="#">Public</a> |
+        <a href="#">Lists</a> |
+        <a href="#">Search</a> |
+        <a href="#">Terms of Service</a> |
+        <a href="#">Privacy Policy</a>
+    </div>
+</div>
+
+</div>
+
+<!------NEW SCRIPT STARTING HERE----->
+<script>
+    var i=2;
+	var m=0;
+	$('.moving').bind('keydown', function(e) {
+        var $self = $(this),
+            dimen = $.extend($self.position(), { 
+            width:  $self.outerWidth(),
+            height: $self.outerHeight()
+        });
+
+        if( e.which === 13 && $.trim(this.value).length ) {
+            $('<tr id="tagcontrol'+i+'"><td class="someclass" style="text-align:right;" id="tagcontrol'+i+'">'+this.value+'</td><td> <input type="range" min="0" max="10" step="1" value="5" onchange="showValue(this.value,'+i+')"></td><td><text id="range'+i+'" style="padding-left:10px;">5</text></td><td><div style="width:100px;text-align:left;" id="tag'+i+'" class="tag" onclick="deletetag('+i+')"><span style="padding-left:10px;">Delete</span></div></td></tr>').appendTo($('.wtf2')) ; i+=1;
+            $self.val('').css('position', 'relative').animate({ top: ((m==0)?"+=0":"+=0") }, 200);m+=1;
+        }
+    });
+</script>
+
+<script>
+
+	function deletetag(i){
+								 $('tr').remove('#tagcontrol'+i);
+	}
+                                </script>
+
+<!-------ENDING HEREEEEEEEEE-->
+<script type='text/javascript' src='js/jquery.simplemodal.js'></script>
+<script type='text/javascript' src='js/contact.js'></script>
+
+
+</body>
+</html>

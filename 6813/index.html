@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<!--
+  COLLABORATORS:
+  
+-->
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Checkerboard</title>
+
+<!-- Load style sheets -->
+<link rel="stylesheet" type="text/css" href="mainLayout.css" />
+
+<!-- Load any supplemental Javascript libraries here -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="checker.js"></script>
+<script type="text/javascript" src="boardEvent.js"></script>
+<script type="text/javascript" src="board.js"></script>
+<script type="text/javascript" src="rules.js"></script>
+
+<script type="text/javascript">
+
+//This script extracts parameters from the URL
+//from jquery-howto.blogspot.com
+
+    $.extend({
+        getUrlVars : function() {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(
+                    window.location.href.indexOf('?') + 1).split('&');
+            for ( var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        },
+        getUrlVar : function(name) {
+            return $.getUrlVars()[name];
+        }
+    });
+
+    var DEFAULT_BOARD_SIZE = 8;
+
+    //data model
+    var board;
+    var rules;
+    var whoseTurn = "black";
+
+    var directionOf = function(color) {
+      if (color == "black") {
+        return -1;
+      }
+      return 1;
+    }
+
+    // Fill in this function to toggle the display for whose turn
+    // The color parameter should be either "black" or "red"
+var toggleTurn = function(color) {
+        $('.turnind').css("background-color",color);
+        $('.turnind').html(color);
+        console.log("turn toggled to: "+color);
+    }
+
+
+
+    // This allows the Javascript code inside this block to only run when the page
+    // has finished loading in the browser.
+    $(document).ready(function() {
+
+        if ($.getUrlVar('size') && $.getUrlVar('size') >= 6) {
+            board = new Board($.getUrlVar('size'));
+        } else {
+            board = new Board(DEFAULT_BOARD_SIZE);
+        }
+
+        rules = new Rules(board);
+        var canvas=document.getElementById('cancan');
+        var ctx=canvas.getContext('2d');
+		
+        var toggle=true;
+        for(i=1;i<=board.boardSize;i++){
+            for(c=1;c<=board.boardSize;c++){
+                if(toggle==true){
+                    $('.board').append('<div class="square white"></div>');
+					console.log("appending white");
+                }else{
+                    $('.board').append('<div class="square gray"></div>');
+					console.log("appending gray");
+                }
+                toggle=!toggle;
+            }
+			if(board.boardSize%2==0){
+				toggle=!toggle;
+			}
+        }
+        $('.square').height(400/board.boardSize);
+        $('.square').width(400/board.boardSize);
+        //$('.square').height(100/board.boardSize+"%");
+		//$('.square').width(100/board.boardSize+"%");
+        board.addEventListener('add',function (e) {
+            //var row = e.details["row"];
+            //var col = e.details["col"];
+            //console.log(row,col);
+            updateBoard();
+        },true);
+
+        board.addEventListener('move',function (e) {
+            updateBoard();
+            if(whoseTurn=="red"){
+                whoseTurn="black";
+                toggleTurn("black");
+                }else{
+                whoseTurn="red";
+                toggleTurn("red");
+                }
+            console.log(e.details);
+            var toRow=e.details["toRow"]
+            var fromRow=e.details["fromRow"]
+            var toCol=e.details["toCol"]
+            var fromCol=e.details["fromCol"]
+            canvas.width=canvas.width;
+            ctx.fillStyle="yellow";
+            ctx.strokeStyle="yellow";
+            ctx.lineWidth=10;
+            ctx.beginPath();
+            var toRowSca=toRow*400/board.boardSize+400/board.boardSize/2;
+            var fromRowSca=fromRow*400/board.boardSize+400/board.boardSize/2;
+            var toColSca=toCol*400/board.boardSize+400/board.boardSize/2;
+            var fromColSca=fromCol*400/board.boardSize+400/board.boardSize/2;
+            ctx.moveTo(fromColSca,fromRowSca);
+            ctx.lineTo(toColSca,toRowSca);
+            ctx.stroke();
+            ctx.fillRect(toColSca-400/board.boardSize/6,toRowSca-400/board.boardSize/6,400/board.boardSize/3,400/board.boardSize/3);
+            ctx.fill();
+        },true);
+
+        board.addEventListener('remove', function(e) {
+            updateBoard();
+        }, true);
+
+        board.addEventListener('promote',function (e) {
+            updateBoard();
+        },true);
+        /**
+         * Update the board based on the result of getallcheckers
+         */
+        function updateBoard(){
+            boardState=board.getAllCheckers();
+            //console.log(boardState);
+            $(".square").css("background-image","none");
+            for(checker in boardState){
+                if(boardState[checker]["isKing"]==true){
+                    var blork = "king";
+                }else{
+                    var blork = "piece";
+                }
+                var filename = "url('graphics/"+boardState[checker]["color"]+"-"+blork+".png"+"')";
+                childno = boardState[checker]["row"]*board.boardSize+boardState[checker]["col"]+1;
+                //alert("coordinates:"+boardState[checker]["row"]+" and "+boardState[checker]["col"]);
+                //alert("childnumber:"+childno);
+                $(".square:nth-child("+childno+")").css("background-image", filename);
+                
+            }
+        }
+        $("#btnNewGame").click(function(evt) {
+            board.prepareNewGame();
+        });
+
+        $("#btnAutoMove").click(function(evt) {
+          var playerColor = whoseTurn;
+          var playerDirection = directionOf(playerColor);
+          var result = rules.makeRandomMove(playerColor, playerDirection);
+          if (result != null) {
+            toggleTurn();
+            }
+        });
+
+        board.prepareNewGame();
+
+    });
+</script>
+
+
+</head>
+
+<body>
+
+<table id="mainTable">
+    <tr>
+        <td id="navigation">
+          <table>
+              <tr><td>
+                  <div class="turnind">Black Turn</div>
+              </td></tr>
+              <tr><td><input id="btnNewGame" type="button" name="new" value="New Game"/></td></tr>
+              <tr><td><input id="btnAutoMove" type="button" name="new" value="Auto Move"/></td></tr>
+
+            </table>
+        </td>
+
+        <td id="content">
+            
+            <canvas id="cancan" width="400" height="400"></canvas>
+            <div class="board">
+
+            </div>
+        </td>
+    </tr>
+
+   </table>
+
+</body>
+
+</html>

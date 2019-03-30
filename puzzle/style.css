@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+.main{
+	position:relative;
+	width:800px;
+	height:400px;
+	left:50%;
+	margin-left:-400px;
+	top:100px;
+}
+
+.question{
+	font-size:30px;
+	text-align:center;
+	font-family:Helvetica;
+}
+
+.answers{
+	width:800px;
+	height:100px;
+	float:left;
+	padding-left:15px;
+}
+
+button{
+	width:180px;
+	height:50px;
+	font-family:Helvetica;
+	font-size:20px;
+	text-align:center;
+	float:left;
+}
+
+li{
+	list-style:none;
+	float:left;
+}
+a{
+	text-decoration:none;	
+}

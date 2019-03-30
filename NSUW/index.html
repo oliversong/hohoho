@@ -1,0 +1,766 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Oliver Song" /> 
+	<meta name="keywords" content="NSUW, Network, of, Sloan, Undergraduate, Women" /> 
+	<meta name="description" content="The Network of Sloan Undergraduate Women" /> 
+	<meta name="robots" content="all" /> 
+	<title>NSUW</title> 
+ 
+ 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />    
+	<script type="text/javascript"></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js" type="text/javascript"></script>
+   	<script src="js/awesome.js" type="text/javascript"></script>
+   	<script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
+    <script>
+$(document).ready(function() {
+	// Expand/Collapse All
+	$('#example1 .expand_all').click(function() {
+		$('#menu1 > li > a.collapsed').addClass('expanded').removeClass('collapsed').parent().find('> ul').slideDown('medium');
+	});
+	$('#example1 .collapse_all').click(function() {
+		$('#menu1 > li > a.expanded').addClass('collapsed').removeClass('expanded').parent().find('> ul').slideUp('medium');
+	});
+	// Slide
+	$("#menu1 > li > a.expanded + ul").slideToggle("medium");
+	$("#menu1 > li > a").click(function() {
+		$(this).toggleClass("expanded").toggleClass("collapsed").parent().find('> ul').slideToggle("medium");
+	});
+
+	// Fade
+	$("#menu2 > li > a.expanded + ul").fadeIn("normal");
+	$("#menu2 > li > a").click(function() {
+		var el = $(this).parent().find('> ul');
+
+		if($(this).hasClass("collapsed"))
+			$(el).fadeIn('normal');
+		else
+			$(el).fadeOut('normal');
+
+		$(this).toggleClass("expanded").toggleClass("collapsed");
+	});
+
+	// Grow/Shrink
+	$("#menu3 > li > a.expanded + ul").show("normal");
+	$("#menu3 > li > a").click(function() {
+		$(this).toggleClass("expanded").toggleClass("collapsed").parent().find('> ul').toggle("normal");
+	});
+
+	// Appear/Disappear
+	$("#menu4 > li > a.expanded + ul").show();
+	$("#menu4 > li > a").click(function() {
+		$(this).toggleClass("expanded").toggleClass("collapsed").parent().find('> ul').toggle();
+	});
+
+	// Accordion
+	$("#menu5 > li > a.expanded + ul").slideToggle("medium");
+	$("#menu5 > li > a").click(function() {
+		$("#menu5 > li > a.expanded").not(this).toggleClass("expanded").toggleClass("collapsed").parent().find('> ul').slideToggle("medium");
+		$(this).toggleClass("expanded").toggleClass("collapsed").parent().find('> ul').slideToggle("medium");
+	});
+});
+	</script>
+</head>
+<body>
+<div class="social"><a target="_new" href="http://www.facebook.com/NSUW"><img src="images/fbook0.png" /></a> <a target="_new" href="http://www.twitter.com/MITNSUW"><img src="images/twitter0.png" /></a></div>
+<div class="contain">
+    <div class="outer">
+		<div class="inner">
+
+			<nav id="side">
+				<img src="images/nav.png" alt="" width="143" height="320" usemap="#Map" />
+				
+				<map name="Map">
+					<area shape="rect" coords="10,16,142,55" href="#top" class="top" alt="Back to the top">
+					<area shape="rect" coords="10,58,142,97" href="#events" class="events" alt="Upcoming Events">
+					<area shape="rect" coords="10,101,142,139" href="#about" class="about" alt="About US">
+					<area shape="rect" coords="10,142,142,181" href="#exec" class="exec" alt="The Exec">
+					<area shape="rect" coords="10,184,142,222" href="#sponsors" class="sponsors" alt="Sponsors">
+					<area shape="rect" coords="10,226,142,264" href="#resources" class="resources" alt="Resources">
+					<area shape="rect" coords="10,269,142,306" href="#contact" class="contact" alt="Contact">
+				</map>
+			</nav>
+
+        	<div id="top" class="header">
+            <p class="intro">
+            "Through NSUW, you will find many helpful resources, meet some cool mentors, and explore how business fits into your life at MIT and beyond. This is truly an exceptional organization."
+            </p>
+            <div class="join"><a class="contact" id="blubbity" href="#contact"><div class="joinbt extrude">Join Now</div></a></div>
+            <div class="members"><a href="#"><div class="membersbt extrude">Members</div></a></div>
+            </div>
+
+			<div id="events" class="header1"></div>            
+            <div class="events1">
+            	<div class="tweeter">
+                    <div class="qstart">
+                    </div>
+                    <div class="twitter">
+                        <script src="js/widget.js"></script>
+                        <script>
+                        new TWTR.Widget({
+                          version: 2,
+                          type: 'profile',
+                          rpp: 1,
+                          interval: 6000,
+                          width: 'auto',
+                          height: 300,
+                          theme: {
+                            shell: {
+                              background: 'inherit',
+                              color: '#000000'
+                            },
+                            tweets: {
+                              background: 'inherit',
+                              color: '#666',
+                              links: '#821d1d'
+                            }
+                          },
+                          features: {
+                            scrollbar: false,
+                            loop: false,
+                            live: false,
+                            hashtags: true,
+                            timestamp: true,
+                            avatars: false,
+                            behavior: 'all'
+                          }
+                        }).render().setUser('MITNSUW').start();
+                        </script>
+                    </div>
+                    </div>
+                    <div class="qend">
+                    </div>
+                <div class="calendar">
+                <iframe style="display:none;"></iframe>
+<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=nsuw.exec%40gmail.com&amp;color=%23A32929&amp;ctz=America%2FNew_York" style=" border-width:0 " width="500" height="400" frameborder="0" scrolling="no"></iframe>
+
+                </div>
+            </div>
+			<div id="about" class="header2"></div>
+            <div class="about1">
+            	<div id="one">
+                    <img style="border: 4px double #000000;left: 60px;position: relative;top: -120px;" src="images/ashvini.jpg" />
+                    <div class="tagone">Ashvini Thammaiah
+    Co-Founder, Co-President
+    Class of 2006
+    				</div>
+               		<div class="partone">                    <span style="font-weight:bold;color:#940C00">NSUW's Mission Statement:</span> "NSUW establishes a network of women undergraduates, faculty, alumnae and professionals to empower women in their business endeavors and support them in the development of their careers. We support our members in their personal and professional pursuits during and after their years at MIT."
+
+                    </div>
+                </div>
+                <div id="two">
+                	<img style="border: 4px double #000000;left: 440px;position: relative;top: -275px;" src="images/steph.jpg" />
+                    <div class="tagtwo">
+                    Stephanie Wu
+    Co-Founder, Co-President
+    Class of 2007
+                    </div>
+                    <div class="parttwo">
+                    <span style="font-weight:bold;color:#940C00">The Network of Sloan Undergraduate Women (NSUW)</span> was co-founded in the Spring of 2005 by Ashvini Thammaiah and Stephanie Wu. Inspired by a conference they attended for women in business, they sought to provide similar opportunities for women at MIT. The idea was developed by an inaugural executive board of nine members. NSUW received full recognition as a student group by the MIT Association of Student Activities (ASA) in December of 2005.
+                    </div>
+                </div>
+            </div>
+			<div id="exec" class="header3">
+            </div>
+            <div class="theexec">
+            	<div class="circle">
+                	<img id="1" class="m1 opacifier" src="images/arooshi.png">
+                    <img id="2" class="m2 opacifier" src="images/anna.png">
+                    <img id="3" class="m3 opacifier" src="images/queenie.png">
+                    <img id="4" class="m4 opacifier" src="images/aparna.png">
+                    <img id="5" class="m5 opacifier" src="images/christina.png">
+                    <img id="6" class="m6 opacifier" src="images/connie.png">
+                    <img id="7" class="m7 opacifier" src="images/ranna.png">
+                    <img id="8" class="m8 opacifier" src="images/audra.png">
+                    <img id="9" class="m9 opacifier" src="images/ashwini.png">
+                    <img id="10" class="m10 opacifier" src="images/jessica.png">
+                    <div class="putin">
+                    	<div class="b1" style="display:none;">
+                        	<div class="punts">
+                            Co-President
+                            </div>
+                        	<table>
+                            	<tr>
+                                	<td>Name</td>
+                                    <td>Arooshi Kumar</td>
+                                </tr>
+                                <tr>
+                                	<td>Class</td>
+                                    <td>2013</td>
+                                </tr>
+                                <tr>
+                                	<td>Major</td>
+                                    <td>9 and 15 (minor)</td>
+                                </tr>
+                                <tr>
+                                	<td>Hometown</td>
+                                    <td>Louisville, KY</td>
+                                </tr>
+                                <tr>
+                                	<td>Business Interest</td>
+                                    <td>Consulting, Finance, Policy</td>
+                                </tr>
+                                <tr>
+                                	<td>Why NSUW</td>
+                                    <td>I am interested in networking and learning from other highly motivated women hoping to establish a name for themselves within the business sphere.</td>
+                                </tr>
+                                <tr>
+                                    <td>Work History</td>
+                                    <td>The World Bank, Harvard School of Public Health, Simons Center, Zanjabee Health</td>
+                                </tr>
+                                <tr>
+                                	<td>Other Activites</td>
+                                    <td>UROP, MIT Bhangra, American Public Health Association, MedLinks, SAAS, Sigma Kappa Sorority</td>
+                                </tr>
+                                <tr>
+                                	<td>Hobbies</td>
+                                    <td>Dancing, listening to music, and traveling!</td>
+                                </tr>                                
+                            </table>
+                        </div>
+                        <div class="b2" style="display:none;">
+                        	<div class="punts">
+                            Co-President
+                            </div>
+                        	<table>
+                            	<tr>
+                                	<td>Name</td>
+                                    <td>Anna Christensen</td>
+                                </tr>
+                                <tr>
+                                	<td>Class</td>
+                                    <td>2013</td>
+                                </tr>
+                                <tr>
+                                	<td>Major</td>
+                                    <td>2 and 15 (minor)</td>
+                                </tr>
+                                <tr>
+                                	<td>Hometown</td>
+                                    <td>Vernon Hills, IL</td>
+                                </tr>
+                                <tr>
+                                	<td>Business Interest</td>
+                                    <td>Consulting</td>
+                                </tr>
+                                <tr>
+                                	<td>Work History</td>
+                                    <td>Intern at GE Energy and Novantas Consulting</td>
+                                </tr>
+
+                                <tr>
+                                	<td>Why NSUW</td>
+                                    <td>Interested in business and how I could apply my Engineering education to the business world.</td>
+                                </tr>
+                                <tr>
+                                	<td>Other Activites</td>
+                                    <td>Varsity Softball, Alpha Chi Omega Sorority, and Freshmen Leadership Program Counselor</td>
+                                </tr>
+                                <tr>
+                                	<td>Hobbies</td>
+                                    <td>Playing/watching sports, reading, and listening to music.</td>
+                                </tr>                                
+                            </table>
+                        </div>
+                        <div class="b3" style="display:none;">
+                        	<div class="punts">
+                            VP of External Relations
+                            </div>
+                            <table>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Queenie Chan</td>
+                                </tr>
+                                <tr>
+                                    <td>Class</td>
+                                    <td>2013</td>
+                                </tr>
+                                <tr>
+                                    <td>Major</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>Hometown</td>
+                                    <td>Wilton, CT</td>
+                                </tr>
+                                <tr>
+                                    <td>Business Interest</td>
+                                    <td>Consulting, public policy</td>
+                                </tr>
+                                <tr>
+                                    <td>Work History</td>
+                                    <td>Langer Lab, Chulabhorn Research Institute, MIT Washington Office</td>
+                                </tr>                                
+                                <tr>
+                                    <td>Why NSUW</td>
+                                    <td>NSUW offers a great opportunity for undergraduates to gain exposure to many different industries and interact with top professionals in various fields. It also is a great way to meet other undergraduate women with similar career interests and get advice from them!</td>
+                                </tr>
+                                <tr>
+                                    <td>Other Activites</td>
+                                    <td>Dance Troupe, Chamber Music Society, Kappa Alpha Theta</td>
+                                </tr>
+                                <tr>
+                                    <td>Hobbies</td>
+                                    <td>Violin, dance, eating, sleeping, hanging out :)</td>
+                                </tr>                                
+                            </table> 
+                        </div>
+                        <div class="b4" style="display:none;">
+                        	<div class="punts">
+                            VP of Internal Relations
+                            </div>
+                            <table>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Aparna Sud</td>
+                                </tr>
+                                <tr>
+                                    <td>Class</td>
+                                    <td>2013</td>
+                                </tr>
+                                <tr>
+                                    <td>Major</td>
+                                    <td>15 and 9 </td>
+                                </tr>
+                                <tr>
+                                    <td>Hometown</td>
+                                    <td>Wellesley, MA</td>
+                                </tr>
+                                <tr>
+                                    <td>Business Interest</td>
+                                    <td>Consulting </td>
+                                </tr>
+                                <tr>
+                                    <td>Work History</td>
+                                    <td>Hungry Fish Media, Morgan Stanley Smith Barney, TBI Consulting</td>
+                                </tr>                                
+                                <tr>
+                                    <td>Why NSUW</td>
+                                    <td>I wanted to be a part of an intimate network of accomplished women, who held a similar interest and excitement for the business world.</td>
+                                </tr>
+                                <tr>
+                                    <td>Other Activites</td>
+                                    <td>Best Buddies, Clay Club Shooting, Associate Advising, The Tech</td>
+                                </tr>
+                                <tr>
+                                    <td>Hobbies</td>
+                                    <td>Sports, Travel, Meeting new people!</td>
+                                </tr>                                
+                            </table>
+                        </div>
+                        <div class="b5" style="display:none;">
+                        	<div class="punts">
+                            VP of internal Relations
+                            </div>
+                        	<table>
+                        	<tr>
+                            	<td>Name</td>
+                                <td>Christina Qi</td>
+                            </tr>
+                            <tr>
+                            	<td>Class</td>
+                                <td>2013</td>
+                            </tr>
+                            <tr>
+                            	<td>Major</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                            	<td>Hometown</td>
+                                <td>Salt Lake City, UT</td>
+                            </tr>
+                            <tr>
+                            	<td>Business Interest</td>
+                                <td>Finance, marketing</td>
+                            </tr>
+                            <tr>
+                            	<td>Work History</td>
+                                <td>Goldman Sachs, UBS Securities Japan, MIT TedLab/Lincoln Labs </td>
+                            </tr>                                
+                            <tr>
+                            	<td>Why NSUW</td>
+                                <td>It's great to meet so many accomplished women in a field dominated by men.</td>
+                            </tr>
+                            <tr>
+                            	<td>Other Activites</td>
+                                <td>CSC, Kappa Alpha Theta, Baker House</td>
+                            </tr>
+                            <tr>
+                            	<td>Hobbies</td>
+                                <td>Mountain sports, travel</td>
+                            </tr>                                
+                        </table>
+                        </div>
+                        <div class="b6" style="display:none;">
+                        	<div class="punts">
+                            VP of Finance
+                            </div>
+                        	<table>
+                            	<tr>
+                                	<td>Name</td>
+                                    <td>Connie Park </td>
+                                </tr>
+                                <tr>
+                                	<td>Class</td>
+                                    <td>2013</td>
+                                </tr>
+                                <tr>
+                                	<td>Major</td>
+                                    <td>3 & 15 </td>
+                                </tr>
+                                <tr>
+                                	<td>Hometown</td>
+                                    <td>Atlanta, Georgia</td>
+                                </tr>
+                                <tr>
+                                	<td>Business Interest</td>
+                                    <td>Sales and Trading</td>
+                                </tr>                            
+                                <tr>
+                                	<td>Why NSUW</td>
+                                    <td>I wanted to get more involved at MIT, and I wanted to work with amazing people!</td>
+                                </tr>
+                                <tr>
+                                	<td>Other Activites</td>
+                                    <td>Varsity Soccer, Student Athlete Advisory Committee, Society of Undergraduate Material Scientists, UROP in Continuous Manufacturing Lab</td>
+                                </tr>
+                                <tr>
+                                	<td>Hobbies</td>
+                                    <td>Running</td>
+                                </tr>                                
+                            </table>
+                        </div>
+                        <div class="b7" style="display:none;">
+                        	<div class="punts">
+                            VP of Alumni Relations
+                            </div>
+                            <table>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Ranna Zhou</td>
+                                </tr>
+                                <tr>
+                                    <td>Class</td>
+                                    <td>2014</td>
+                                </tr>
+                                <tr>
+                                    <td>Major</td>
+                                    <td>15 and 18C</td>
+                                </tr>
+                                <tr>
+                                    <td>Hometown</td>
+                                    <td>Chicago, IL</td>
+                                </tr>
+                                <tr>
+                                    <td>Business Interest</td>
+                                    <td>Financial consulting</td>
+                                </tr>
+                                <tr>
+                                    <td>Work History</td>
+                                    <td>UROP</td>
+                                </tr>                                
+                                <tr>
+                                    <td>Why NSUW</td>
+                                    <td>NSUW gives undergrad women the kind of professional development workshops that everyone is looking for and an alumni network that is eager and willing to be contacted for help. </td>
+                                </tr>
+                                <tr>
+                                    <td>Other Activites</td>
+                                    <td>MIT TechFair exec</td>
+                                </tr>
+                                <tr>
+                                    <td>Hobbies</td>
+                                    <td>Finding delicious cafes in quaint places (favorite at the moment: lunch at Eatery in NYC), running.</td>
+                                </tr>                                
+                            </table>
+                        </div>
+                        <div class="b8" style="display:none;">
+                        	<div class="punts">
+                            VP of Administrations
+                            </div>
+                            
+                        </div>
+                        <div class="b9" style="display:none;">
+                        	<div class="punts">
+							VP of Operations
+                            </div>
+                            <table>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Ashwini Gokhale</td>
+                                </tr>
+                                <tr>
+                                    <td>Class</td>
+                                    <td>2013</td>
+                                </tr>
+                                <tr>
+                                    <td>Major</td>
+                                    <td>6-2</td>
+                                </tr>
+                                <tr>
+                                    <td>Hometown</td>
+                                    <td>Peoria, IL</td>
+                                </tr>
+                                <tr>
+                                    <td>Business Interest</td>
+                                    <td>Consulting, Investment Banking</td>
+                                </tr>
+                                <tr>
+                                    <td>Work History</td>
+                                    <td>Caterpillar, Boeing, Chevron</td>
+                                </tr>                                
+                                <tr>
+                                    <td>Why NSUW</td>
+                                    <td>Awesome group of people to hang out with, learn about business grad school/internship opportunities</td>
+                                </tr>
+                                <tr>
+                                    <td>Other Activites</td>
+                                    <td>IEEE, ACM, SWE</td>
+                                </tr>
+                                <tr>
+                                    <td>Hobbies</td>
+                                    <td>Traveling, reading, watching TV</td>
+                                </tr>                                
+                            </table>
+                        </div>
+                        <div class="b10" style="display:none;">
+                        	<div class="punts">
+							VP of Marketing
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div id="sponsors" class="header4"></div>
+            <div class="sponsors1">
+                <img class="sponsor" src="images/jpmorgan.png">
+                <img class="sponsor" src="images/ow.png">
+                <img class="sponsor" src="images/goldman.png">
+                <img class="sponsor" src="images/bnp.png">
+            </div>
+			<div id="resources" class="header5"></div>
+            <div class="resources1">
+            	<ul id="menu5" class="example_menu">
+                	<li><a class="expanded">Financial Modeling with J.P.Morgan</a>
+                        <ul>
+                        	<li><a href="http://web.mit.edu/nsuw/newsletters/Financial_Modeling_Template.xls">Financial Modeling Event Template</a></li>
+                            <li><a href="http://web.mit.edu/nsuw/newsletters/Completed_Financial_Modeling_Template.xls">Completed Financial Modeling Event Template</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer"><span> </span></li>
+                    <li><a class="collapsed">NSUW Newsletters</a>
+                        <ul>
+                        	<li><a href="http://web.mit.edu/nsuw/newsletters/newsletter_04_26_10_2.pdf">Nsuw Newsletter 04/26/2010</a></li>
+                            <li><a href="http://web.mit.edu/nsuw/newsletters/newsletter_04_06_10.pdf">Nsuw Newsletter 04/06/2010</a></li>
+                            <li><a href="http://web.mit.edu/nsuw/newsletters/newsletter_03_29_10.pdf">Nsuw Newsletter 03/29/2010</a></li>
+                            <li><a href="http://web.mit.edu/nsuw/newsletters/newsletter_03_15_10.pdf">Nsuw Newsletter 03/15/2010</a></li>
+                            <li><a href="http://web.mit.edu/nsuw/newsletters/newsletter_03_08_10.pdf">Nsuw Newsletter 03/08/2010</a></li>
+                            <li><a href="http://web.mit.edu/nsuw/newsletters/newsletter_03_01_10.pdf">Nsuw Newsletter 03/01/2010</a></li>
+                            <li><a href="http://web.mit.edu/nsuw/newsletters/newsletter_02_22_10.pdf">Nsuw Newsletter 02/22/2010</a></li>
+                            <li><a href="http://web.mit.edu/nsuw/newsletters/newsletter_02_15_10.pdf">Nsuw Newsletter 02/15/2010</a></li>
+                            <li><a href="http://web.mit.edu/nsuw/newsletters/newsletter_02_08_10.pdf">Nsuw Newsletter 02/08/2010</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="footer"><span> </span></li>
+                    <li><a class="collapsed">Sloan Resources</a>
+                        <ul>
+                        	<li><a href="http://mitsloan.mit.edu/indexflash.php">MIT Sloan School of Management</a></li>
+                            <li><a href="http://mitsloan.mit.edu/women/r-main.php">Sloan Resources for Women</a></li>
+                            <li><a href="http://sloancf.mit.edu/vpf/d-main.cfm">Sloan Faculty Biographies </a></li>
+                        </ul>
+                    </li>
+                    <li class="footer"><span> </span></li>
+                    <li><a class="collapsed">Women in Business Organizations</a>
+                        <ul>
+                        	<li><a href="http://www.85broads.com/">85 Broads</a></li>
+                            <li><a href="http://www.fortefoundation.org/site/PageServer">Forte Foundation</a></li>
+                            <li><a href="http://www.pinkmagazine.com/">Pink Women's Business Magazine</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer"><span> </span></li>
+                    <li><a class="collapsed">MIT Resources</a>
+                        <ul>
+                        	<li><a href="http://web.mit.edu/career/www/">MIT Careers Office</a></li>
+                            <li><a href="http://mitsloan.mit.edu/women/">MIT Association for Women Student</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer"><span> </span></li>
+                    <li><a class="collapsed">University Resources</a>
+                        <ul>
+                        	<li><a href="http://www.huwib.org/">Harvard Undergraduate Women in Business</a></li>
+                            <li><a href="http://www.wharton-women.com/">Wharton Women</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer"><span> </span></li>
+                    <li><a class="collapsed">Other</a>
+                        <ul>
+                        	<li><a href="http://www.vault.com/index.jsp">Vault Guide</a></li>
+                            <li><a href="http://www.wsj.com/">Wall Street Journal</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer"><span> </span></li>
+                </ul>
+            </div>
+			<div id="contact" class="header6"></div>
+            <div class="contact1">
+                <link rel="stylesheet" type="text/css" href="http://www.emailmeform.com/builder/styles/dynamic.php?t=post" />
+                <style>
+				.formErrorArrow div{
+					background:#940C00 !important;	
+				}
+				.formErrorContent{
+					background:#940C00 !important;
+				}
+				
+				</style>
+                <script type="text/javascript" src="http://www.emailmeform.com/builder/js/dynamic.php?t=post&t2=0"></script>
+                <form id="emf-form" enctype="multipart/form-data" method="post" action="http://www.emailmeform.com/builder/form/25z861FkVAdJ0dh" name="emf-form">
+                  <table style="text-align:left;" cellpadding="2" cellspacing="0" border="0" bgcolor="transparent">
+                    <tr>
+                      <td style="" colspan="2">
+                        <br />
+                      </td>
+                    </tr>
+                    <tr valign="top">
+                      <td style="" align="left">
+                        <font face="Helvetica" size="2" color="#000000"><b>Name</b></font> <span style="color:red;"><small>*</small></span>
+                      </td>
+                      <td style="">
+                        <input id="element_0" name="element_0" placeholder="Name!" value="" size="30" class="validate[required]" type="text" />
+                        <div style="padding-bottom:8px;color:#000000;"></div>
+                      </td>
+                    </tr>
+                    <tr valign="top">
+                      <td style="" align="left">
+                        <font face="Helvetica" size="2" color="#000000"><b>Email</b></font> <span style="color:red;"><small>*</small></span>
+                      </td>
+                      <td style="">
+                        <input id="element_1" name="element_1" placeholder="Emails!" class="validate[required,custom[email]]" value="" size="30" type="text" />
+                        <div style="padding-bottom:8px;color:#000000;"></div>
+                      </td>
+                    </tr>
+                    <tr valign="top">
+                      <td style="" align="left">
+                        <font face="Helvetica" size="2" color="#000000"><b>Subject</b></font> <span style="color:red;"><small>*</small></span>
+                      </td>
+                      <td style="">
+                        <input id="element_2" name="element_2" placeholder="Hello NSUW!" value="" size="30" class="validate[required]" type="text" />
+                        <div style="padding-bottom:8px;color:#000000;"></div>
+                      </td>
+                    </tr>
+                    <tr valign="top">
+                      <td style="" align="left">
+                        <font face="Helvetica" size="2" color="#000000"><b>Message</b></font> <span style="color:red;"><small>*</small></span>
+                      </td>
+                      <td style="vertical-align:top;">
+                        <textarea id="element_3" name="element_3" placeholder="Some Stuff!" cols="50" rows="10" class="validate[required] butts"></textarea>
+                        <div style="padding-bottom:8px;color:#000000;"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" align="right">
+                        <input name="element_counts" value="4" type="hidden" /> <input name="embed" value="forms" type="hidden" /><input value="Send" type="submit" />
+                      </td>
+                    </tr>
+                  </table>
+                </form><script type="text/javascript">
+                //<![CDATA[
+                $(function(){
+                        $("#emf-form").validationEngine({
+                                validationEventTriggers:"blur",
+                                scroll:false
+                        });
+                        
+                        $('.datepicker').datepicker({
+                                showOn: 'button',
+                                buttonImage: base_url+'images/calendar.png',
+                                buttonImageOnly: true,
+                                onSelect: function(dateText, inst) {
+                                        var selectedDate = new Date(dateText);
+                                        $('#'+inst.id+'year').val(selectedDate.getFullYear());
+                                        $('#'+inst.id+'year-mm').val(((selectedDate.getMonth()+1)>9)?(selectedDate.getMonth()+1):('0'+(selectedDate.getMonth()+1)));
+                                        $('#'+inst.id+'year-dd').val(selectedDate.getDate()>9?selectedDate.getDate():'0'+selectedDate.getDate());
+                                        $('.'+inst.id+'yearformError').remove();
+                                        $('.'+inst.id+'year-mmformError').remove();
+                                        $('.'+inst.id+'year-ddformError').remove();
+                                },
+                                changeMonth: true,
+                                changeYear: true
+                        });
+                        if(document.getElementById('captcha_image')!=null){
+                                get_valid_captcha();
+                        }
+                
+                if(document.getElementById('captcha_image')!=null){
+                        var isSafari = (/Safari/.test(navigator.userAgent));
+                        var firstTimeSession = 0;
+                        function process_captcha(){
+                                $('a#captcha_code_refresh').trigger('click');
+                                get_valid_captcha();
+                        }
+                        function safari_submit_session_form() {
+                                if (firstTimeSession == 0) {
+                                        firstTimeSession = 1;
+                                        $("#safari_sessionform").submit();
+                                        setTimeout('process_captcha()',2000);
+                                }
+                        }
+                        if(isSafari){
+                                $("body").append('<iframe id="safari_sessionframe" name="safari_sessionframe" onload="safari_submit_session_form();" src="http://www.emailmeform.com/get_safari_cookies.php" style="display:none;"><\/iframe><form id="safari_sessionform" enctype="application/x-www-form-urlencoded" action="http://www.emailmeform.com/get_safari_cookies.php" target="safari_sessionframe" action="post"><\/form>');
+                        }
+                }
+                
+                });
+                //]]>
+                </script>
+            </div>
+            <img class="seal" src="images/nsuwseal.png" /><br />
+			<span class="pagebottom">
+            	<span>Made by <a style="color:#000;text-decoration:none;" href="http://www.olli.es">Oliver Song</a></span><span> |  <a style="text-decoration:none;color:#000;" href="#">Terms of Service</a>  | </span><span><a style="color:#000;text-decoration:none;" href="#">Privacy Policy</a></span><br />
+            	<span style="color:#000;position:relative;left:22px;">Copyright &copy; 2011 NSUW, All Rights Reserved</span>
+            </span>
+        </div><!--inner-->
+    </div><!--outer-->
+</div><!--contain-->
+	<script>
+
+//$(".extrude").hover(function(){
+//    $(this).animate({top:"-5px",left:"-5px"},{duration:200,step:function(now, fx){
+//		y=$(this).css("text-shadow");
+//		value = "rgb(68, 68, 68) "+Math.abs(now)+"px "+Math.abs(now)+"px 0px";
+//		$(this).css("text-shadow",y+', '+value);
+//	}});}, function() {
+ //   $(this).animate({top:"0px",left:"0px"},{duration:200,step:function(now, fx){
+//		z=$(this).css("text-shadow");
+	//	z=z.split(", r");
+	//	z.pop();
+	//	z=z.join(", r")
+	//	$(this).css("text-shadow",z);
+	//		}
+	//	}
+	//);
+	//}
+//);
+
+
+//$(document).ready(function(){
+//	x=$('body').css("height");
+//	y=x.slice(0,4);
+//	z=parseInt(y);
+//	z=z-50;
+//    $('.contain').css("height",z+"px");
+//});
+
+$(".opacifier").hover(function(){
+	blah=$(this).attr('id');
+	$(".b"+blah).css("display","inherit");
+},function(){
+	blah=$(this).attr('id');
+	$(".b"+blah).css("display","none");
+	});
+	</script>
+</body>
+
+</html>

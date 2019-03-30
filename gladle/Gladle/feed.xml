@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <id>urn:iweb:B8C1AB9B-845D-43F4-86E4-C90A31FE918D</id>
+ <title>Page list Atom feed</title>
+ <updated>2010-02-28T14:03:06-05:00</updated>
+ <link rel="self" href="feed.xml"/>
+ <generator>iWeb</generator>
+ <author>
+  <name>iWeb</name>
+ </author>
+ <entry>
+  <id>urn:iweb:8BF55379-0B3A-45C1-812D-0C2012CC04B1</id>
+  <title>ДОБРО ПОЖАЛОВАТЬ</title>
+  <title xmlns="urn:iweb:">ДОБРО ПОЖАЛОВАТЬ</title>
+  <in-navbar xmlns="urn:iweb:">8BF55379-0B3A-45C1-812D-0C2012CC04B1</in-navbar>
+  <link rel="alternate" href="DOBRO_POZALOVAT.html"/>
+  <updated>2010-02-28T14:03:06.001-05:00</updated>
+  <content>ДОБРО ПОЖАЛОВАТЬ</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:6B3A157E-B30B-4EBA-A352-B1CB224C2653</id>
+  <title>ИНФОРМАЦИЯ</title>
+  <title xmlns="urn:iweb:">ИНФОРМАЦИЯ</title>
+  <in-navbar xmlns="urn:iweb:">6B3A157E-B30B-4EBA-A352-B1CB224C2653</in-navbar>
+  <link rel="alternate" href="INFORMACIA.html"/>
+  <updated>2010-02-28T14:03:06.002-05:00</updated>
+  <content>ИНФОРМАЦИЯ</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:5D814E9C-AAF8-443A-BB10-71BC11F4971E</id>
+  <title>РЕКЛАМА</title>
+  <title xmlns="urn:iweb:">РЕКЛАМА</title>
+  <in-navbar xmlns="urn:iweb:">5D814E9C-AAF8-443A-BB10-71BC11F4971E</in-navbar>
+  <link rel="alternate" href="REKLAMA.html"/>
+  <updated>2010-02-28T14:03:06.003-05:00</updated>
+  <content>РЕКЛАМА</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:08F26576-433F-4EBC-8CFC-22237C66500C</id>
+  <title>PHODOZ</title>
+  <title xmlns="urn:iweb:">PHODOZ</title>
+  <in-navbar xmlns="urn:iweb:">08F26576-433F-4EBC-8CFC-22237C66500C</in-navbar>
+  <link rel="alternate" href="PHODOZ.html"/>
+  <updated>2010-02-28T14:03:06.004-05:00</updated>
+  <content>PHODOZ</content>
+ </entry>
+</feed>
